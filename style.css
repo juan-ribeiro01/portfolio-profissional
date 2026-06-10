@@ -1,0 +1,332 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* GERAL */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#0f172a;
+    color:white;
+    line-height:1.8;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:bold;
+    color:#60a5fa;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 50px;
+
+    background:
+    linear-gradient(
+        rgba(15,23,42,.85),
+        rgba(15,23,42,.95)
+    );
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.foto{
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #60a5fa;
+
+    margin-bottom:25px;
+
+    box-shadow:
+    0 0 25px rgba(96,165,250,.5);
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    color:#60a5fa;
+    margin-bottom:20px;
+    min-height:40px;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+/* REDES */
+
+.social{
+    margin-top:25px;
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.social a{
+    text-decoration:none;
+
+    background:#1e293b;
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#60a5fa;
+    color:black;
+}
+
+/* BOTÃO */
+
+.btn{
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    background:#60a5fa;
+    color:black;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* SEÇÕES */
+
+section{
+    padding:90px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:40px;
+}
+
+/* SOBRE */
+
+#sobre p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.card i{
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+    color:#60a5fa;
+
+    display:block;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 25px rgba(96,165,250,.5);
+}
+
+/* ESTATÍSTICAS */
+
+.stats{
+    display:flex;
+
+    justify-content:center;
+    gap:50px;
+
+    flex-wrap:wrap;
+
+    padding:50px 20px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h3{
+    font-size:2.5rem;
+    color:#60a5fa;
+}
+
+.stat p{
+    color:#cbd5e1;
+}
+
+/* CONTATO */
+
+.contato-box{
+    max-width:700px;
+    margin:auto;
+}
+
+.contato-box p{
+    margin-bottom:15px;
+    font-size:1.1rem;
+}
+
+.contato-box a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+
+    padding:30px;
+
+    background:#111827;
+
+    margin-top:50px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .foto{
+        width:170px;
+        height:170px;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+}
+.card,
+.stat,
+section h2,
+#sobre p{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.8s;
+}
+
+.mostrar{
+
+    opacity:1 !important;
+
+    transform:translateY(0) !important;
+}
